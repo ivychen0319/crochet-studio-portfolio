@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0">
+
+    <meta
+            name="description"
+            content="Crochet Studio - 使用 Java Spring Boot 開發的鉤織作品管理與圖解製作系統">
+
+    <title>
+        Crochet Studio｜鉤織作品管理系統
+    </title>
+
+    <link
+            rel="stylesheet"
+            href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     Navbar
+     ===================================================== -->
+
+<nav class="navbar">
+
+    <div class="navbar-container">
+
+        <a
+                class="navbar-brand"
+                href="#home">
+
+            Crochet Studio
+
+        </a>
+
+
+        <div class="navbar-links">
+
+            <a href="#about">
+                專案介紹
+            </a>
+
+            <a href="#features">
+                系統功能
+            </a>
+
+            <a href="#screenshots">
+                系統畫面
+            </a>
+
+            <a href="#technology">
+                使用技術
+            </a>
+
+            <a href="#architecture">
+                系統架構
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     Hero
+     ===================================================== -->
+
+<header
+        id="home"
+        class="hero">
+
+    <div class="container hero-container">
+
+        <div class="hero-content">
+            <h1>
+
+                Crochet
+                <span>
+                    Studio
+                </span>
+
+            </h1>
+
+
+            <h2>
+                鉤織作品管理與圖解製作系統
+            </h2>
+
+
+            <p class="hero-description">
+
+                一套用來整理鉤織作品、記錄製作資訊，
+                並建立可重新編輯鉤織圖解的 Web 應用程式。
+
+            </p>
+
+
+            <div class="hero-tech">
+
+                <span>
+                    Java 21
+                </span>
+
+                <span>
+                    Spring Boot
+                </span>
+
+                <span>
+                    PostgreSQL
+                </span>
+
+                <span>
+                    Thymeleaf
+                </span>
+
+                <span>
+                    JavaScript
+                </span>
+
+                <span>
+                    SVG
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+    <!-- =====================================================
+     About
+     ===================================================== -->
+
+    <section
+            id="about"
+            class="section">
+
+        <div class="container">
+
+
+            <div class="about-grid">
+
+
+                <!-- 左側：作品列表畫面 -->
+
+                <div class="about-preview">
+
+                    <div class="browser-frame">
+
+                        <div class="browser-top">
+
+                            <div class="browser-dots">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                            </div>
+
+
+                            <div class="browser-address">
+
+                                Crochet Studio
+
+                            </div>
+
+                        </div>
+
+
+                        <img
+                                src="images/project-list.png"
+                                alt="Crochet Studio 作品列表頁">
+
+                    </div>
+
+                </div>
+
+
+                <!-- 右側：專案介紹 -->
+
+                <div class="about-content">
+
+                    <div class="section-heading about-heading">
+
+                        <span class="section-label">
+                            ABOUT
+                        </span>
+
+                        <h2>
+                            專案介紹
+                        </h2>
+
+                    </div>
+
+
+                    <div class="about-main">
+
+                        <h3>
+                            Crochet Studio
+                        </h3>
+
+
+                        <p>
+
+                            Crochet Studio 是一套以 Java Spring Boot 開發的 Web 應用程式。
+                            可以管理紀錄自己的鉤織作品資訊。
+
+                        </p>
+
+
+                        <p>
+
+                            除了基本的作品管理功能，
+                            還有鉤織圖解編輯器，
+                            可以在畫布中加入不同的鉤織符號，
+                            並進行拖曳、旋轉、群組、 顏色設定以及圖解編輯。
+                            圖解資料轉換為 JSON 儲存，
+                            可以重新開啟既有圖解並繼續修改。
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         Features
+         ===================================================== -->
+
+    <section
+            id="features"
+            class="section section-soft">
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    FEATURES
+                </span>
+
+                <h2>
+                    系統功能
+                </h2>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+
+                <!-- 01 -->
+
+                <article class="feature-card">
+
+                    <span class="feature-number">
+                        01
+                    </span>
+
+                    <h3>
+                        作品管理
+                    </h3>
+
+                    <p>
+
+                        提供作品新增、查詢、編輯與刪除功能，
+                        保存作品分類、毛線、鉤針尺寸、
+                        製作狀態與說明。
+
+                    </p>
+
+                </article>
+
+
+                <!-- 02 -->
+
+                <article class="feature-card">
+
+                    <span class="feature-number">
+                        02
+                    </span>
+
+                    <h3>
+                        搜尋與篩選
+                    </h3>
+
+                    <p>
+
+                        可依作品名稱、分類、鉤針尺寸、
+                        毛線名稱及作品狀態篩選作品清單，
+                        提升查找效率。
+
+                    </p>
+
+                </article>
+
+
+                <!-- 03 -->
+
+                <article class="feature-card">
+
+                    <span class="feature-number">
+                        03
+                    </span>
+
+                    <h3>
+                        圖解編輯器
+                    </h3>
+
+                    <p>
+
+                        使用 JavaScript 與 SVG 建立鉤織圖解，
+                        可加入不同鉤織符號並自由調整位置，
+                        支援符號選取、拖曳、旋轉、多選、複製貼上以及顏色設定。
+                        將 SVG 畫布中的符號資訊轉換成 JSON，
+                        儲存到資料庫後可再次載入並繼續編輯。
+
+                    </p>
+
+                </article>
+
+                <!-- 04 -->
+
+                <article class="feature-card">
+
+                    <span class="feature-number">
+                        04
+                    </span>
+
+                    <h3>
+                        響應式網頁設計
+                    </h3>
+
+                    <p>
+
+                        針對電腦與手機調整版面，
+                        包含作品列表與鉤織圖解編輯介面。
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         Screenshots
+         ===================================================== -->
+
+    <section
+            id="screenshots"
+            class="section">
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    SCREENSHOTS
+                </span>
+
+                <h2>
+                    系統畫面
+                </h2>
+            </div>
+
+
+
+            <!-- =================================================
+                 Screenshot 01
+                 ================================================= -->
+
+            <div class="screenshot-section">
+
+
+                <div class="screenshot-info">
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        作品列表
+                    </h3>
+
+                    <p>
+
+                        集中顯示所有鉤織作品，
+                        可以直接查看作品照片、分類、
+                        毛線、鉤針尺寸及目前製作狀態。
+
+                    </p>
+
+                    <p>
+
+                        作品列表另外提供搜尋與條件篩選，
+                        可以依不同作品資訊快速找到需要的紀錄。
+
+                    </p>
+
+                </div>
+
+
+                <div class="screenshot-image">
+
+                    <video
+                            class="screenshot-video"
+                            src="images/project-list.mp4"
+                            autoplay
+                            muted
+                            loop
+                            playsinline
+                            preload="metadata">
+
+                        您的瀏覽器不支援影片播放。
+
+                    </video>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 Screenshot 02
+                 ================================================= -->
+
+            <div class="screenshot-section screenshot-reverse">
+
+
+                <div class="screenshot-info">
+
+                    <span>
+                        02
+                    </span>
+
+                    <h3>
+                        作品詳細資料
+                    </h3>
+
+                    <p>
+
+                        顯示作品分類、毛線、
+                        鉤針尺寸、製作狀態、
+                        作品說明以及所有作品照片。
+
+                    </p>
+
+                    <p>
+
+                        同一個作品可以建立多個鉤織圖解，
+                        並從作品詳細頁直接查看。
+
+                    </p>
+
+                </div>
+
+
+                <div class="screenshot-image">
+
+                    <video
+                            class="screenshot-video"
+                            src="images/project-detail.mp4"
+                            autoplay
+                            muted
+                            loop
+                            playsinline
+                            preload="metadata">
+
+                        您的瀏覽器不支援影片播放。
+
+                    </video>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 Screenshot 03
+                 ================================================= -->
+
+            <div class="screenshot-section">
+
+
+                <div class="screenshot-info">
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        作品新增與編輯
+                    </h3>
+
+                    <p>
+
+                        透過表單新增或修改作品資訊，
+                        包含作品名稱、分類、毛線、
+                        鉤針尺寸、狀態與文字說明。
+
+                    </p>
+
+                    <p>
+
+                        編輯既有作品時也可以繼續新增作品照片，
+                        並管理此作品的鉤織圖解。
+
+                    </p>
+
+                </div>
+
+                <div class="screenshot-image">
+
+                    <video
+                            class="screenshot-video"
+                            src="images/project-edit.mp4"
+                            autoplay
+                            muted
+                            loop
+                            playsinline
+                            preload="metadata">
+
+                        您的瀏覽器不支援影片播放。
+
+                    </video>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 Screenshot 04
+                 ================================================= -->
+
+            <div class="screenshot-section screenshot-reverse">
+
+
+                <div class="screenshot-info">
+
+                    <span>
+                        04
+                    </span>
+
+                    <h3>
+                        鉤織圖解編輯器
+                    </h3>
+
+                    <p>
+
+                        使用 SVG 畫布建立可編輯鉤織圖解，
+                        提供不同鉤針符號與顏色工具。
+
+                    </p>
+
+                    <p>
+
+                        支援拖曳、多選、旋轉、群組、
+                        複製貼上、Undo 以及 PNG 下載。
+
+                    </p>
+
+                </div>
+
+                <div class="screenshot-image">
+
+                    <video
+                            class="screenshot-video"
+                            src="images/chart-editor.mp4"
+                            autoplay
+                            muted
+                            loop
+                            playsinline
+                            preload="metadata">
+
+                        您的瀏覽器不支援影片播放。
+
+                    </video>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         Technology
+         ===================================================== -->
+
+    <section
+            id="technology"
+            class="section section-soft">
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    TECHNOLOGY
+                </span>
+
+                <h2>
+                    使用技術
+                </h2>
+
+            </div>
+
+
+            <div class="technology-grid">
+
+
+                <article class="technology-card">
+
+                    <span>
+                        Backend
+                    </span>
+
+                    <h3>
+                        Java 21 / Spring Boot
+                    </h3>
+
+                    <p>
+                        使用 Java 21 與 Spring Boot 作為後端核心，
+                        採用 Spring MVC 處理 HTTP Request 與頁面導向，
+                        並以 Controller、Service、Repository 
+                        分層實作系統功能；透過 Spring Data JPA 與 
+                        Hibernate 進行資料存取。
+                    </p>
+
+                </article>
+
+                <article class="technology-card">
+
+                    <span>
+                        Frontend
+                    </span>
+
+                    <h3>
+                        Thymeleaf / Bootstrap / JavaScript / SVG
+                    </h3>
+
+                    <p>
+                        使用 Thymeleaf 建立動態頁面，
+                        搭配 CSS 與 Bootstrap 設計使用者介面，
+                        搭配 JavaScript 與 SVG 實作鉤織圖解編輯器，
+                        並針對電腦與手機畫面進行響應式版面設計。
+                    </p>
+
+                </article>
+
+
+                <article class="technology-card">
+
+                    <span>
+                        Database
+                    </span>
+
+                    <h3>
+                        PostgreSQL
+                    </h3>
+
+                    <p>
+                        使用 Supabase 提供的 PostgreSQL 
+                        儲存作品資訊及圖解 JSON 等資料。
+                    </p>
+
+                </article>
+
+
+                <article class="technology-card">
+
+                    <span>
+                        Storage
+                    </span>
+
+                    <h3>
+                        Supabase Storage
+                    </h3>
+
+                    <p>
+                        儲存使用者上傳的作品照片，
+                        並保存圖片 URL 與作品之間的關聯。
+                    </p>
+
+                </article>
+
+
+                <article class="technology-card">
+
+                    <span>
+                        Deployment
+                    </span>
+
+                    <h3>
+                        Microsoft Azure
+                    </h3>
+
+                    <p>
+                        使用 Azure App Service 部署系統，
+                        並以環境變數管理正式環境的連線資訊與金鑰。
+                    </p>
+
+                </article>
+
+
+                <article class="technology-card">
+
+                    <span>
+                        Development
+                    </span>
+
+                    <h3>
+                        IntelliJ IDEA / Git / GitHub
+                    </h3>
+
+                    <p>
+                        使用 IntelliJ IDEA 進行開發，
+                        並使用 Git / GitHub 進行版本控制與程式碼管理。
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         Architecture
+         ===================================================== -->
+
+    <section
+            id="architecture"
+            class="section">
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    ARCHITECTURE
+                </span>
+
+                <h2>
+                    系統架構
+                </h2>
+
+                <p>
+                    使用 MVC + Service + Repository 分層架構。
+                </p>
+
+            </div>
+
+
+            <div class="architecture-wrapper">
+
+
+                <div class="architecture-row">
+
+                    <div class="architecture-box">
+                        Browser
+                    </div>
+
+                    <span>
+                        →
+                    </span>
+
+                    <div class="architecture-box">
+                        Thymeleaf View
+                    </div>
+
+                    <span>
+                        →
+                    </span>
+
+                    <div class="architecture-box">
+                        Controller
+                    </div>
+
+                    <span>
+                        →
+                    </span>
+
+                    <div class="architecture-box">
+                        Service
+                    </div>
+
+                    <span>
+                        →
+                    </span>
+
+                    <div class="architecture-box">
+                        Repository
+                    </div>
+
+                    <span>
+                        →
+                    </span>
+
+                    <div class="architecture-box">
+                        JPA / Hibernate
+                    </div>
+
+                    <span>
+                        →
+                    </span>
+
+                    <div class="architecture-box">
+                        PostgreSQL
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="architecture-description">
+
+
+                <div>
+
+                    <strong>
+                        View
+                    </strong>
+
+                    <p>
+
+                        Thymeleaf 負責將後端資料動態
+                        呈現在 HTML 頁面。
+
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Controller
+                    </strong>
+
+                    <p>
+
+                        接收使用者 HTTP Request，
+                        並將操作交由 Service 處理。
+
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Service
+                    </strong>
+
+                    <p>
+
+                        處理作品、圖片與鉤織圖解的應用邏輯。
+
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Repository
+                    </strong>
+
+                    <p>
+
+                        使用 Spring Data JPA 
+                        與 PostgreSQL 進行資料存取。
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================================
+     Footer
+     ===================================================== -->
+
+<footer>
+
+    <div class="container footer-container">
+
+        <div>
+            <strong>
+                Crochet Studio
+            </strong>
+
+        </div>
+
+
+        <p>
+            Personal Project
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
